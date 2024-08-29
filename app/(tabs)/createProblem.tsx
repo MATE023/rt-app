@@ -9,7 +9,8 @@ export default function createProblem() {
         title: "",
         description: "",
         difficulty: "",
-        url: ""
+        url: "",
+        solutionIds: []
     });
   
     const handleInputChange = (name: keyof Problem, value: string) => {

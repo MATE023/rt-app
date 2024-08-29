@@ -4,4 +4,5 @@ export type Problem = {
     description: string;
     difficulty: string;
     url: string;
+    solutionIds: string[];
   };

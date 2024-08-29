@@ -9,23 +9,7 @@ import { Problem } from '@/constants/Problem';
 export default function ProblemsScreen() {
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState<Problem[]>([]);
-  /*
-    const getProblems = async () => {
-      try {
-        const response = await fetch('https://rtapi-git-main-mateos-projects-b74250f3.vercel.app/problems');
-        const json = await response.json();
-        console.log(json[0].title);
-        setData(json.problems);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    useEffect(() => {
-        getProblems();
-      }, []);
-*/
+
     useEffect(() => {
         axios.get<Problem[]>('https://rtapi-git-main-mateos-projects-b74250f3.vercel.app/problems')
         .then(response => {
