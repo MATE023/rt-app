@@ -1,6 +1,6 @@
 export type Question = {
     id: string;
     content: string;
-    answerChoices: string[];
+    answerChoiceIds: string[];
     correctAnswer: string;
 }
